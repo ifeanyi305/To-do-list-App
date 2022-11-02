@@ -1,0 +1,53 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.todolist-con {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 2px black;
+}
+
+.todo-header {
+  margin-bottom: 10px;
+}
+
+.ul-items {
+  list-style: none;
+}
+
+.list-con {
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-con {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.btn-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
