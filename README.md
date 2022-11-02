@@ -26,7 +26,7 @@ If you installed git you can clone the code to your machine, or download a ZIP o
 
 Download the ZIP from this location, or run the following git command to clone the files to your machine:
 
-git clone https://github.com/eerapheal/toDolist.git
+git clone https://github.com/ifeanyi305/To-do-list-App.git
 - Once the files are on your machine, open the _todo-list_ folder in [Visual Studio Code](https://code.visualstudio.com/), and follow the steps in Installation & Set Up
 
 ## 🛠 Installation & Set Up
