@@ -5,14 +5,21 @@ import './style.css';
 import { addList, displayList } from './modules/app.js';
 import localGet from './modules/localstorage.js';
 
-const addBtn = document.getElementById('added');
+const form = document.querySelector('.list-con');
 const todoTask = document.getElementById('input');
 
 window.addEventListener('load', () => {
-    displayList();
+  displayList();
 });
 
-addBtn.addEventListener('click', () => {
-  addList(todoTask.value, false, localGet.length + 1);
+// addBtn.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   addList(todoTask.value, false, localGet.length + 1);
+//   displayList();
+// })
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  addList(todoTask.value, false, localGet().length + 1);
   displayList();
-})
+});
