@@ -2,7 +2,7 @@
 import _ from 'lodash';
 /* eslint-enable */
 import './style.css';
-import { addList, displayList, } from './modules/app.js';
+import { addList, displayList } from './modules/app.js';
 import localGet from './modules/localstorage.js';
 
 const form = document.querySelector('.list-con');
