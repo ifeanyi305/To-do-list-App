@@ -52,7 +52,7 @@ git clone https://github.com/ifeanyi305/To-do-list-App.git
 Author1 Ifeanyi joseph oti.
 
 GitHub: (https://github.com/ifeanyi305); 
-Twitter: (https://twitter.com/ifeanyioti2020); 
+Twitter: (https://twitter.com/otiifeanyi2020); 
 LinkedIn: (https://www.linkedin.com/ifeanyi305)
 
 # 🤝 Contributing
