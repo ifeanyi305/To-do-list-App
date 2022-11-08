@@ -6,7 +6,7 @@ To do list.
 
 This To-do list App is built using webpack and served by a webpack dev server
 
-Project web demo link.
+Project web demo link:  https://ifeanyi305.github.io/To-do-list-App/dist/
 
 Built With Html. Css. JS.
 
