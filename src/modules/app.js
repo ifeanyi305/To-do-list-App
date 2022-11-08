@@ -16,7 +16,7 @@ const displayList = () => {
         <div class="toDoItem">
         <input class='item' id='check-${id}', "completed")' type='checkbox' ${item.Checked ? 'true' : 'false'} onChange='updateList(${id}, "completed")' ${isCompleted}>
         <input onkeyup='updateList(${id})' type="text" class='findInput' id='input-${id}' value='${item.description}' />
-        <i onclick='removeList(${item.index})' id='delete-${item.index}'>🗑️</i>
+        <i onclick='removeList(${item.index})' class='del-btn' id='delete-${item.index}'>🗑️</i>
         </div>
         `;
   });
