@@ -16,9 +16,14 @@ document.body.innerHTML = `<section>
 </section>`;
 
 describe('When we do basic add, delete', () => {
-  test('if we add an item', () => {
+  test('if we add an item it should have one list', () => {
     addList('Hi I am Hein', false, 0);
-    const data = JSON.parse(localStorage.getItem('listStorage'));
+    const data = document.querySelectorAll('.toDoItem');
     expect(data).toHaveLength(1);
+  });
+  test('if we remove an item it should remove one list', () => {
+    removeList(0);
+    const data = document.querySelectorAll('.toDoItem');
+    expect(data).toHaveLength(0);
   });
 });
