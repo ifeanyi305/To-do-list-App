@@ -37,8 +37,7 @@ const reAssignIndex = (filteredArray) => {
     item.index = i + 1;
   });
 };
-
-window.removeList = (id) => {
+const removeList = (id) => {
   const filteredArray = localGet().filter((item) => {
     if (item.index !== id) {
       return item;
@@ -50,6 +49,7 @@ window.removeList = (id) => {
 
   displayList();
 };
+window.removeList = removeList;
 
 window.updateList = (id) => {
   const updateInput = document.querySelector(`#input-${id}`).value;
@@ -69,4 +69,4 @@ window.updateList = (id) => {
   localStorage.setItem('listStorage', JSON.stringify(updateArray));
 };
 
-export { addList, displayList };
+export { addList, displayList, removeList};
