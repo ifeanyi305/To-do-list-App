@@ -1,9 +1,9 @@
 import ListTemplate from './template.js';
 import localGet from './localstorage.js';
 
-const todoContent = document.getElementById('listItem');
-const todoTask = document.getElementById('input');
 const displayList = () => {
+  const todoContent = document.getElementById('listItem');
+
   todoContent.replaceChildren();
   localGet().forEach((item, id) => {
     let isCompleted;
@@ -23,6 +23,8 @@ const displayList = () => {
 };
 
 const addList = (description, completed, index) => {
+  const todoTask = document.getElementById('input');
+
   const listAdded = new ListTemplate(description, completed, index);
   const x = localGet();
   x.push(listAdded);
@@ -37,8 +39,7 @@ const reAssignIndex = (filteredArray) => {
     item.index = i + 1;
   });
 };
-
-window.removeList = (id) => {
+const removeList = (id) => {
   const filteredArray = localGet().filter((item) => {
     if (item.index !== id) {
       return item;
@@ -51,7 +52,7 @@ window.removeList = (id) => {
   displayList();
 };
 
-window.updateList = (id) => {
+const updateList = (id) => {
   const updateInput = document.querySelector(`#input-${id}`).value;
   const updateArray = localGet().map((item) => {
     if (item.index - 1 === id) {
@@ -69,4 +70,6 @@ window.updateList = (id) => {
   localStorage.setItem('listStorage', JSON.stringify(updateArray));
 };
 
-export { addList, displayList };
+export {
+  addList, displayList, removeList, updateList,
+};
