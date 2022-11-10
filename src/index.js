@@ -3,7 +3,7 @@ import _ from 'lodash';
 /* eslint-enable */
 import './style.css';
 import {
-  addList, displayList, removeList, updateList,
+  addList, displayList, removeList, updateList, updateChecked,
 } from './modules/app.js';
 import clearCompleted from './modules/deleteAll.js';
 import localGet from './modules/localstorage.js';
@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
 
 window.removeList = removeList;
 window.updateList = updateList;
-
+window.updateChecked = updateChecked;
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   addList(todoTask.value, false, localGet().length + 1);
@@ -27,5 +27,6 @@ form.addEventListener('submit', (event) => {
 
 clearAll.addEventListener('click', () => {
   clearCompleted();
+  window.location.reload();
   displayList();
 });
