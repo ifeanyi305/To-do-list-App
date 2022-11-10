@@ -21,9 +21,14 @@ describe('When we do basic add, delete', () => {
     const data = document.querySelectorAll('.toDoItem');
     expect(data).toHaveLength(1);
   });
+  test('if we add another item', () => {
+    addList('hi im oti', true, 1);
+    const data = document.querySelectorAll('.toDoItem');
+    expect(data).toHaveLength(2);
+  });
   test('if we remove an item it should remove one list', () => {
     removeList(0);
     const data = document.querySelectorAll('.toDoItem');
-    expect(data).toHaveLength(0);
+    expect(data).toHaveLength(1);
   });
 });
