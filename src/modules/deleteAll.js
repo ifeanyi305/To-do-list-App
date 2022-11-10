@@ -13,7 +13,6 @@ const clearCompleted = () => {
     return item;
   });
   localStorage.setItem('listStorage', JSON.stringify(inCompleted));
-  window.location.reload();
 };
 
 export default clearCompleted;
