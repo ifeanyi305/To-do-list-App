@@ -14,7 +14,7 @@ const displayList = () => {
     }
     todoContent.innerHTML += `
         <div class="toDoItem">
-        <input class='item' id='check-${id}', "completed")' type='checkbox' ${item.Checked ? 'true' : 'false'} onChange='updateList(${id}, "completed")' ${isCompleted}>
+        <input class='item' id='check-${id}', "completed")' type='checkbox' ${item.Checked ? 'true' : 'false'} onChange='updateChecked(${id})' ${isCompleted}>
         <input onkeyup='updateList(${id})' type="text" class='findInput' id='input-${id}' value='${item.description}' />
         <i onclick='removeList(${item.index})' class='del-btn' id='delete-${item.index}'>🗑️</i>
         </div>
@@ -52,24 +52,28 @@ const removeList = (id) => {
   displayList();
 };
 
+const updateChecked = (id) => {
+  const updateInput = document.querySelector(`#check-${id}`).checked;
+  const updateArray = localGet().map((item) => {
+    if (item.index - 1 === id) {
+      item.completed = updateInput;
+    }
+    return item;
+  });
+  localStorage.setItem('listStorage', JSON.stringify(updateArray));
+};
+
 const updateList = (id) => {
   const updateInput = document.querySelector(`#input-${id}`).value;
   const updateArray = localGet().map((item) => {
     if (item.index - 1 === id) {
       item.description = updateInput;
-
-      if (item.completed === true) {
-        item.completed = false;
-      } else {
-        item.completed = true;
-      }
     }
     return item;
   });
-
   localStorage.setItem('listStorage', JSON.stringify(updateArray));
 };
 
 export {
-  addList, displayList, removeList, updateList,
+  addList, displayList, removeList, updateList, updateChecked,
 };

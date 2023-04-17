@@ -1,5 +1,7 @@
-// import { JSDOM } from 'jsdom';
-import { addList, removeList } from './app.js';
+import {
+  addList, removeList, updateChecked, updateList,
+} from './app.js';
+import clearCompleted from './deleteAll.js';
 
 document.body.innerHTML = `<section>
 <div class="todolist-con">
@@ -22,13 +24,38 @@ describe('When we do basic add, delete', () => {
     expect(data).toHaveLength(1);
   });
   test('if we add another item', () => {
-    addList('hi im oti', true, 1);
+    addList('hi im oti', false, 1);
     const data = document.querySelectorAll('.toDoItem');
     expect(data).toHaveLength(2);
+  });
+  test('if we add another item', () => {
+    addList('hi im hien two', false, 2);
+    const data = document.querySelectorAll('.toDoItem');
+    expect(data).toHaveLength(3);
   });
   test('if we remove an item it should remove one list', () => {
     removeList(0);
     const data = document.querySelectorAll('.toDoItem');
-    expect(data).toHaveLength(1);
+    expect(data).toHaveLength(2);
+  });
+  test('if we update an item', () => {
+    document.querySelector('#input-0').value = 'im oti';
+    updateList(0);
+    const data = JSON.parse(localStorage.getItem('listStorage'));
+    const filtereData = data.filter((item) => item.index === 1);
+    expect(filtereData[0].description).toBe('im oti');
+  });
+  test('if we check an item', () => {
+    document.querySelector('#check-0').checked = true;
+    updateChecked(0);
+    const data = JSON.parse(localStorage.getItem('listStorage'));
+    const filtereData = data.filter((item) => item.index === 1);
+    expect(filtereData[0].completed).toBe(true);
+  });
+  test('if we remove all completed items', () => {
+    clearCompleted();
+    const data = JSON.parse(localStorage.getItem('listStorage'));
+    const filtereData = data.filter((item) => item.completed === true);
+    expect(filtereData).toHaveLength(0);
   });
 });
