@@ -18,6 +18,9 @@
 
 - Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
 
+## Live Demo
+[todo list](https://ifeanyi305.github.io/To-do-list-App/)
+
 ### Linter Tests
 
 - `npx hint .`
