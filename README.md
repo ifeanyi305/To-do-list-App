@@ -1,80 +1,83 @@
-# Project Name
+## TODO LIST WEB_APP
 
-To do list.
+- This is a basic website that allows users to add/remove todo's from a list.
 
-# Description of project.
+## Built With
 
-This To-do list App is built using webpack and served by a webpack dev server
+- HTML
 
-Project web demo link:  https://ifeanyi305.github.io/To-do-list-App/dist/
+- CSS
 
-Built With Html. Css. JS.
+- Javascript(ES6)
 
-Website link:
+- WebPack
 
-# Getting starting
+- Lighthouse (An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more).
 
-To get a local copy up and running follow these simple example steps:
+- Webhint (A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors).
 
-# Prerequisites
+- Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
 
-Vscode. must have git installed.
+### Linter Tests
 
-# Setup
+- `npx hint .`
+- `npx stylelint "**/*.{css,scss}"`
+- `npx eslint .`
 
-If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
+### Prerequisites
 
-Download the ZIP from this location, or run the following git command to clone the files to your machine:
+- Have a local version control like Git. Which is a open source distributed version control system designed for source code management
+- A text editor (e.g Visual Studio Code, Vim, Atom & Sublime.)
+- A web browser (e.g Chrome, Safari, Mozilla Firefox.)
+- Live Server which is a web extension that helps you to live reload feature for dynamic content (PHP, Node.js, ASPNET)
+- Download waves to check project accessibilty
 
-git clone https://github.com/ifeanyi305/To-do-list-App.git
-- Once the files are on your machine, open the _todo-list_ folder in [Visual Studio Code](https://code.visualstudio.com/), and follow the steps in Installation & Set Up
+### Getting Started
 
-## 🛠 Installation & Set Up
+To get a local copy up and running follow these simple example steps.
 
-1. Install Node Modules
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
+### Installation
+
+1. Clone the repo by running the command
    ```sh
-   npm install
-   
-   2. Start the development server
-
+    git clone https://github.com/V-Blaze/To_Do_List
+   ```
+2. Open the directory of the project
    ```sh
-   npm start
-3. Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
-
-## 🚀 Building and Running for Production
-
-1. Generate a full static production build
-
+   cd To_Do_List
+   ```
+3. Open the html file
    ```sh
-   npm run build
+   Click and open the html file
+   ```
 
-Author1 Ifeanyi joseph oti.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-GitHub: (https://github.com/ifeanyi305); 
-Twitter: (https://twitter.com/otiifeanyi2020); 
-LinkedIn: (https://www.linkedin.com/ifeanyi305)
+See the [open issues](#) for a full list of proposed features (and known issues).
 
-# 🤝 Contributing
- Contributions, issues, and feature requests are welcome! Feel free to check the [issues page]Fork the Project Create your Feature Branch (git checkout -b 'branchname') Commit your Changes (git commit -m 'Add some branchname') Push to the Branch (git push origin branchname) Open a Pull Request Feel free to check the
+## Authors
 
- ## Deployment
-  Push changes to a branch. Wait for the build to pass on our CI server. Tell Hubot to deploy it. Verify that the changes work and fix any problems that come up. Merge the branch into master.
+👤 Ifeanyi Oti
 
-## Show your support 
-Give a ⭐️ if you like this project!
+- GitHub: [@ifeanyi305](https://github.com/ifeanyi305)
+- Twitter: [@otiifeanyi2020](https://twitter.com/Otiifeanyi2020)
+- LinkedIn: [otijoseph](https://www.linkedin.com/in/oti-joseph-ifeanyi/)
 
-## Acknowledgments 
-MICROVERSE and My Team.
+## 🤝 Contributing
 
-License This project is MIT licensed.
+- Contributions, issues, and feature requests are welcome!
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Feel free to check the [issues page](https://github.com/V-Blaze/To_Do_List/issues).
+
+## Show your support
+
+- Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+- This project is [MIT](MIT.md) licensed.
